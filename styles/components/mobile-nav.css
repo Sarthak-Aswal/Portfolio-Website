@@ -1,0 +1,38 @@
+.mobile_nav{
+    position: absolute;
+    border: 1px solid green;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-black);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.mobile_nav_menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.mobile_nav_link{
+    text-decoration: none;
+    font-size: var(--size-sm);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    color: var(--clr-cerulean);
+    transition: color 0.3s;
+}
+.mobile_nav_link:hover{
+    color: var(--clr-prussion-blue);
+}
+.mobile_nav_btn{
+    font-size: var(--size-sm);
+}

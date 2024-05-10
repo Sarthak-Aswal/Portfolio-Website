@@ -1,0 +1,132 @@
+.hero{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.hero_image{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+   
+}
+.hero_subtitle{
+    color: var(--clr-cerulean);
+    font-size: var(--size-base);
+    line-height: 0.9 ;
+}
+.hero_title{
+    color: var(--clr-white);
+    font-size: var(--size-4xl);
+    text-transform: uppercase;
+    letter-spacing: -0.0S5em;
+    line-height: 0.9 ;
+}
+.hero_description{
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-prussion-blue);
+}
+.hero_btn{
+    text-transform: capitalize;
+    font-size: var(--size-sm);
+}
+
+
+@media(min-width: 475px){
+    .hero{
+       
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .hero_image{
+        
+        width: 6.5rem;
+        height: 6.5rem;
+       
+    }
+    .hero_subtitle{
+        
+        font-size: var(--size-lg);
+        
+    }
+    .hero_title{
+        
+        font-size: var(--size-5xl);
+        
+       
+    }
+    .hero_description{
+        
+        font-size: var(--size-base);
+       
+    }
+    .hero_btn{
+       
+        font-size: var(--size-base);
+    }
+   }
+
+@media(min-width: 1024px){
+   
+    .hero_image{
+        
+        width: 8rem;
+        height: 8rem;
+       
+    }
+    .hero_subtitle{
+        
+        font-size: var(--size-2xl);
+        
+    }
+    .hero_title{
+        
+        font-size: var(--size-7xl);
+        
+       
+    }
+    .hero_description{
+        
+        font-size: var(--size-lg);
+       
+    }
+    .hero_btn{
+       
+        font-size: var(--size-lg);
+    }
+   }
+@media(min-width: 1280px){
+    .hero{
+        gap:2rem;
+    }
+    .hero_image{
+        
+        width: 10rem;
+        height: 10rem;
+       
+    }
+    .hero_subtitle{
+        
+        font-size: var(--size-4xl);
+        
+    }
+    .hero_title{
+        
+        font-size: var(--size-9xl);
+        
+       
+    }
+    .hero_description{
+        
+        font-size: var(--size-xl);
+       
+    }
+    .hero_btn{
+       
+        font-size: var(--size-xl);
+    }
+   }
