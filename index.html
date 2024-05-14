@@ -13,17 +13,22 @@
     <link rel="stylesheet" href="./styles/components/hero.css">
     <link rel="stylesheet" href="./styles/components/mobile-nav.css">
     <link rel="stylesheet" href="./styles/components/project.css">
+    <link rel="stylesheet" href="./styles/components/skills.css">
     <link rel="stylesheet" href="./styles/utils.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
   </head>
+  
   <body>
+   
     <header class="header container">
+      <h2 class="header_title">Portfolio.</h2>
       <nav>
         <ul class="header_menu">
           <li><a href="#about" class="header_link">About</a></li>
-          <li><a href="#contact" class="header_link">Contact</a></li>
+          <li><a href="#skills" class="header_link">Skills</a></li>
           <li><a href="#project" class="header_link">Projects</a></li>
+          <li><a href="#contact" class="header_link">Contact</a></li>
           <li><a href="#" class="header_resume btn ">Resume</a></li>
 
         </ul>
@@ -53,7 +58,7 @@
         <h2 class="hero_subtitle">Hi I'm Sarthak Aswal</h2>
         <h1 class="hero_title">Front-End Web <br>Developer.</h1>
         <p class="hero_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sint corporis sapiente expedita at repudiandae doloremque minima assumenda, perspiciatis laboriosam saepe, voluptatem nobis. Necessitatibus mollitia aliquam quasi. Adipisci, aut aliquid?</p>
-        <a href="#" class="hero_btn btn">Reach out</a>
+        <a href="mailto:sarthakaswal2003@gmail.com" class="hero_btn btn">Reach out</a>
       </section>
       <section id="about" class="about container section">
         <div class="about_content">
@@ -61,19 +66,28 @@
           <p class="about_description">Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab bla Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab bla</p>
           <p class="about_description">Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab blaBla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab bla</p>
           <p class="about_description">Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab blaBla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blab bla</p>
-          <hr>
-          <h3 class="about_subtitle">Skills</h3>
-          <ul class="about_ul">
-            <li class="about_list">C</li>
-            <li class="about_list">C++</li>
-            <li class="about_list">Html</li>
-            <li class="about_list">Css</li>
-            <li class="about_list">Javascript</li>
-          </ul>
+          <div class="about_socials">
+            <a href="https://github.com/Sarthak-Aswal" target="_blank"><img src="./public/github.png" class="social_image" alt="github social link"></a>
+            <a href="#"><img src="./public/linkedin.png" class="social_image" alt=linkedin social link""></a>
+          </div>
         </div>
+       
         <div class="about_image_wrapper">
           <img src="./public/profilejpg.jpg" alt="my picture" class="about_image">
         </div>
+      </section>
+      <section id="skills" class="skills container section ">
+          <h2 class="skills_title">Skills</h2>
+          <ul class="skills_ul">
+            <li class="skills_list hide"><img class="skills_image " src="./public/html.png" alt="">
+              <h3 class="skills_subtitle">Html</h3>
+            </li>
+            <li class="skills_list hide"><img class="skills_image " src="./public/css-3.png" alt=""><h3 class="skills_subtitle">Css</h3></li>
+            <li class="skills_list hide "><img class="skills_image" src="./public/java-script.png" alt=""><h3 class="skills_subtitle">Javascript</h3></li>
+            <li class="skills_list hide"><img class="skills_image " src="./public/letter-c.png" alt=""><h3 class="skills_subtitle">C</h3></li>
+            <li class="skills_list hide"><img class="skills_image " src="./public/c-.png" alt=""><h3 class="skills_subtitle">C++</h3></li>
+            <li class="skills_list hide"><img class="skills_image " src="./public/python.png" alt=""><h3 class="skills_subtitle">Python</h3></li>
+          </ul>
       </section>
       <section id="project" class="project container section">
         <h2 class="project_title">Projects</h2>
@@ -91,6 +105,6 @@
     <footer class="footer container section">
       <h3 class="footer_title">~Sarthak Aswal~</h3>
     </footer>
-    <script type="module" src="src/main.js"></script>
+    <script defer type="module" src="src/main.js"></script>
   </body>
 </html>

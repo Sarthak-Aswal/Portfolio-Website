@@ -1,14 +1,17 @@
 
 .header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
     position: relative;
     z-index: 9999;
 }
-
+.header_title{
+    font-size:var(--size-2xl);
+ 
+}
 .header_menu{
     display: none;
 }
@@ -27,6 +30,10 @@
        
    }
 @media(min-width: 768px){
+    .header_title{
+        font-size:var(--size-4xl);
+     
+    }
     .header_menu{
         display: flex;
         align-items: center;
@@ -61,6 +68,7 @@
         font-size: var(--size-s);
         
     }
+   
    
     .header_resume{
         font-size: var(--size-s);

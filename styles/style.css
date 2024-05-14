@@ -5,10 +5,12 @@
 :root{
     --clr-white:#FFFFFF;
     --clr-black:#00171F;
-    --clr-prussion-blue:#003459;
+    --clr-prussion-blue:#195783;
     --clr-picton-blue:#00A8E8;
-    --clr-cerulean:#007EA7;
-    /*picton bllue rgb(0, 168, 232)*/
+    --clr-cerulean:#0c4558;
+    /*picton bllue rgb(0, 168, 232)
+    #003459
+    */
     /*sizes*/
     --size-xxs:0.5rem;
     --size-xs:0.75rem;
@@ -62,4 +64,5 @@ body::-webkit-scrollbar {
     background-color: var(--clr-cerulean);
     
   }
+
 

@@ -33,7 +33,18 @@
     font-size: var(--size-sm);
     color: var(--clr-white);
 }
-
+.social_image{
+    width: 2.5rem;
+    transition: all 0.7s ease;
+}
+.about_socials{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+.social_image:hover{
+transform: scale(1.2);
+}
 @media(min-width: 475px){
     .about{
         
@@ -75,9 +86,11 @@
     .about{
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items:center;
     }
-    
+    .social_image{
+        width: 3rem;
+    }
     .aboout_title{
         font-size: var(--size-4xl);
         
