@@ -8,6 +8,10 @@
     --clr-prussion-blue:#195783;
     --clr-picton-blue:#00A8E8;
     --clr-cerulean:#0c4558;
+    --clr-orange: #f75600;
+    --clr-yellow: #e9ce2c;
+    --clr-cream:#ebebd3;
+    --clr-red:#da4167;
     /*picton bllue rgb(0, 168, 232)
     #003459
     */
@@ -64,5 +68,4 @@ body::-webkit-scrollbar {
     background-color: var(--clr-cerulean);
     
   }
-
 

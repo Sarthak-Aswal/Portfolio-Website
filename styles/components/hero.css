@@ -29,12 +29,16 @@
     max-width: 60ch;
     font-size: var(--size-sm);
     color: var(--clr-prussion-blue);
+    
 }
 .hero_btn{
     text-transform: capitalize;
     font-size: var(--size-sm);
 }
-
+strong{
+    color: var(--clr-red);
+    font-size: var(--size-base);
+  }
 
 @media(min-width: 475px){
     .hero{
@@ -71,7 +75,10 @@
    }
 
 @media(min-width: 1024px){
-   
+    strong{
+    
+        font-size: var(--size-xl);
+      }
     .hero_image{
         
         width: 8rem;
