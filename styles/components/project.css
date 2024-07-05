@@ -35,7 +35,7 @@
     margin-top: 2rem;
 }
 .project_description_mobile{
-    text-align: center;
+    text-align:justify;
     font-size: 1.5ch;
 }
 .mobile_project{
@@ -43,6 +43,7 @@
 }
 .project_title_mobile{
     font-size: var(--size-2xl);
+    text-align: center;
 }
 @media(min-width: 475px){
     .project_title{
