@@ -1,16 +1,22 @@
 .about{
     display: flex;
     flex-direction: column;
+    
     gap: 2rem;
 }
 .about_content{
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 .aboout_title{
     font-size: var(--size-2xl);
     color: var(--clr-white);
+    
 }
 .about_description{
     max-width: 60ch;
@@ -111,7 +117,7 @@ transform: scale(1.2);
     }
 }
 @media(min-width: 1280px){
-    .aboout_title{
+    .about_title{
         font-size: var(--size-5xl);
         
     }
