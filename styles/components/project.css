@@ -85,8 +85,10 @@
     }
     .timeline_component{
         margin: 20px 20px 20px 20px;
+     
     
     }
+    
     .timeline_component_link_right{
         display: flex;
         justify-content: center;
@@ -181,3 +183,4 @@
     
     }
 }
+

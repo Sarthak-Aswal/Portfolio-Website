@@ -47,6 +47,7 @@ img,picture,video,svg,canvas{
     max-width: 100%;
     user-select: none;   
 }
+
 button{
     display: inline-block;
     padding: 0;
