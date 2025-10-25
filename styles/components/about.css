@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    text-align: center;
 }
 .aboout_title{
     font-size: var(--size-2xl);
@@ -141,4 +142,9 @@ transform: scale(1.2);
     .about_image{
         width: 30.75rem;
     }
+}
+
+/* center about text on all screens */
+.about_content {
+  text-align: center;
 }

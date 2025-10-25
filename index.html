@@ -31,15 +31,14 @@
           <li><a href="#contact" class="header_link">Contact</a></li>
 
           <li><a href="public/resume/SarthakAswalResume.pdf" download="SarthakAswalResume.pdf" class="header_resume btn ">Resume</a></li>
-
-          
-
         </ul>
+
+        <!-- mobile-only resume button (visible on small screens to the left of the menu button) -->
+        <a href="public/resume/SarthakAswalResume.pdf" download="SarthakAswalResume.pdf" class="header_resume_mobile btn" aria-hidden="true">Resume</a>
         <button class="header_bar">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
             <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
           </svg>
-          
         </button>
       </nav>
     </header>
@@ -47,6 +46,7 @@
     <!--Mobile Nav-->
 
     <div class="mobile_nav">
+      
       <nav>
         <ul class="mobile_nav_menu">
           <li><a class="mobile_nav_link" href="#about">About</a></li>
@@ -69,15 +69,14 @@
         <img src="./public/avatar.jpg" alt="my profile picture" class="hero_image">
         <h2 class="hero_subtitle">Hi I'm Sarthak Aswal</h2>
         <h1 class="hero_title">A Software <br>Developer.</h1>
-        <p class="hero_description">Dedicated and soon to be <strong>Computer Science</strong> graduate with knowledge of <strong>C, C++, Html, Css, Javascript</strong> and other languages and technologies.Eager to secure an internship or a job where i can showcase my skills and knowledge and learn new things.</p>
-        <a href="mailto:sarthakaswal2003@gmail.com" class="hero_btn btn">Reach out</a>
+        <p class="hero_description">Dedicated  <strong>Computer Science</strong> graduate with knowledge of <strong>C, C++, Html, Css, Javascript, Java</strong> and other languages and technologies.Seeking opportunities to apply my skills and contribute to impactful projects.</p>
+         <a href="mailto:sarthakaswal68@gmail.com"  class="contact_button btn">Reach Out</a>
       </section>
  
       <section id="about" class="about container section">
         <div class="about_content">
           <h2 class="about_title">About</h2>
-          <p class="about_description">Hello! My name is Sarthak Aswal and I am a Computer Science student. I am very driven and love learning new things. </p>
-          <p class="about_description">I love to build things for the internet and I am eager to bring my ability to develop, test and maintain softwares and various technologies with a dynamic team that focuses on innovation.</p>
+          <p class="about_description">Hello! My name is Sarthak Aswal and I am a Computer Science student, graduated from Graphic Era Hill University,Dehradun. I am very driven and love learning new things.</p>
           <p class="about_description">You can checkout my Github account below and feel free to contact me.</p>
           <div class="about_socials">
             <a href="https://github.com/Sarthak-Aswal" class="btn" target="_blank">Github Profile</a>
@@ -93,14 +92,15 @@
       <section id="skills" class="skills container section ">
           <h2 class="skills_title">Skills</h2>
           <ul class="skills_ul">
-            <li class="skills_list hide"><img class="skills_image " src="./public/html.png" alt="">
+                        <li class="skills_list hide"><img class="skills_image" src="./public/letter-c.png" alt="" width="48" height="48"><h3 class="skills_subtitle">C</h3></li>
+            <li class="skills_list hide"><img class="skills_image" src="./public/c-.png" alt="" width="48" height="48"><h3 class="skills_subtitle">C++</h3></li>
+            <li class="skills_list hide"><img class="skills_image" src="./public/java.png" alt="" width="48" height="48"><h3 class="skills_subtitle">Java</h3></li>
+            <li class="skills_list hide"><img class="skills_image" src="./public/html.png" alt="" width="48" height="48">
               <h3 class="skills_subtitle">Html</h3>
             </li>
-            <li class="skills_list hide"><img class="skills_image " src="./public/css-3.png" alt=""><h3 class="skills_subtitle">Css</h3></li>
-            <li class="skills_list hide "><img class="skills_image" src="./public/java-script.png" alt=""><h3 class="skills_subtitle">Javascript</h3></li>
-            <li class="skills_list hide"><img class="skills_image " src="./public/letter-c.png" alt=""><h3 class="skills_subtitle">C</h3></li>
-            <li class="skills_list hide"><img class="skills_image " src="./public/c-.png" alt=""><h3 class="skills_subtitle">C++</h3></li>
-            <li class="skills_list hide"><img class="skills_image " src="./public/python.png" alt=""><h3 class="skills_subtitle">Python</h3></li>
+            <li class="skills_list hide"><img class="skills_image" src="./public/css-3.png" alt="" width="48" height="48"><h3 class="skills_subtitle">Css</h3></li>
+            <li class="skills_list hide"><img class="skills_image" src="./public/java-script.png" alt="" width="48" height="48"><h3 class="skills_subtitle">Javascript</h3></li>
+
           </ul>
       </section>
       
@@ -135,8 +135,8 @@
         <div class="timeline_point"></div>
       </div>
       <div class="timeline_component timeline_component_bg right hide_right">
-             <h2 class="timeline_title">Discount Alert Bot</h2>
-             <p class="timeline_description">It is a Python-based application designed to help users track discounts and price drops on their favorite products from various online retailers. Utilizing web scraping techniques with Beautiful Soup, this bot monitors specified product pages and sends alerts when discounts are detected, ensuring that users never miss out on a great deal.</p>
+             <h2 class="timeline_title">WebGenie: AI-Powered Website Generator</h2>
+             <p class="timeline_description">A modern web application built using Next.js, Tailwind CSS, and Shadcn UI that allows users to generate responsive websites from natural language prompts.Integrated the Gemini API to convert user input into structured HTML/CSS/JS code, enabling intelligent and dynamic web template generation.</p>
       </div>
       <div class="timeline_component timeline_component_bg left hide_left">
         <h2 class="timeline_title">Simple Web Server in C++</h2></h2>
@@ -165,9 +165,9 @@
             <a href="https://github.com/Sarthak-Aswal/Youtube-Comments-Sentiment-Analyser" target="_blank" class="btn project_link_mobile ">Github Link</a>
           </div>
           <div class="project_container_mobile">
-            <h2 class="project_title_mobile">Discount Alert Bot</h2>
-            <p class="project_description_mobile">It is a Python-based application designed to help users track discounts and price drops on their favorite products from various online retailers. Utilizing web scraping techniques with Beautiful Soup, this bot monitors specified product pages and sends alerts when discounts are detected, ensuring that users never miss out on a great deal.</p>
-            <a href="https://github.com/Sarthak-Aswal/DiscountAlertBot" target="_blank" class="btn project_link_mobile">Github Link</a>
+            <h2 class="project_title_mobile">WebGenie: AI-Powered Website Generator</h2>
+            <p class="project_description_mobile">A modern web application built using Next.js, Tailwind CSS, and Shadcn UI that allows users to generate responsive websites from natural language prompts.Integrated the Gemini API to convert user input into structured HTML/CSS/JS code, enabling intelligent and dynamic web template generation.</p>
+            <a href="https://github.com/Sarthak-Aswal/WebGenie" target="_blank" class="btn project_link_mobile">Github Link</a>
           </div>
           <div class="project_container_mobile">
             <h2 class="project_title_mobile">Simple Web Server in C++</h2>
@@ -179,12 +179,48 @@
         <!--End of project mobile-->
 
       </section>
+
+      <!-- Other website (gallery of 4 screenshots for the same site) -->
+      <section id="other-website" class="other_site_section container section">
+        <h2 class="other_site_title">Some Snapshots of my project</h2>
+
+
+
+          <div class="other_site_gallery" aria-hidden="false">
+  <picture>
+    <source media="(max-width:767px)" srcset="./public/mobilesite1.png" type="image/jpeg">
+    <source media="(min-width:768px)" srcset="./public/site1.png" type="image/jpeg">
+    <img src="./public/site1.jpg" alt="Other site screenshot 1" width="1903" height="975" class="other_site_image" loading="lazy">
+  </picture>
+
+  <picture>
+    <source media="(max-width:767px)" srcset="./public/mobilesite2.png" type="image/jpeg">
+    <source media="(min-width:768px)" srcset="./public/site2.png" type="image/jpeg">
+    <img src="./public/site2.jpg" alt="Other site screenshot 2" width="1903" height="975" class="other_site_image" loading="lazy">
+  </picture>
+
+  <picture>
+    <source media="(max-width:767px)" srcset="./public/mobilesite3.png" type="image/jpeg">
+    <source media="(min-width:768px)" srcset="./public/site3.png" type="image/jpeg">
+    <img src="./public/site3.jpg" alt="Other site screenshot 3" width="1903" height="975" class="other_site_image" loading="lazy">
+  </picture>
+
+  <picture>
+    <source media="(max-width:767px)" srcset="./public/mobilesite4.png" type="image/jpeg">
+    <source media="(min-width:768px)" srcset="./public/site4.png" type="image/jpeg">
+    <img src="./public/site4.jpg" alt="Other site screenshot 4" width="1903" height="975" class="other_site_image" loading="lazy">
+  </picture>
+</div>
+        </div>
+      </section>
+      <!-- End other website section -->
+
       <section id="contact" class="contact container section">
         <h2 class="contact_title">Get in Contact</h2>
         <p class="contact_description">Whether you are starting a project, have business inquiries or just
           want to say hi, my inbox is always open so feel free to reach out and
           I will get back to you as soon as possible.</p>
-        <a href="mailto:sarthakaswal2003@gmail.com"  class="contact_button btn">Reach Out</a>
+        <a href="mailto:sarthakaswal68@gmail.com"  class="contact_button btn">Reach Out</a>
       </section>
       <section></section>
     </main>

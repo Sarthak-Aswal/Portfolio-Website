@@ -184,3 +184,444 @@
     }
 }
 
+/* Mobile-only project animations: wait for .in-view to run animation */
+@media (max-width: 767px) {
+  /* ensure the mobile timeline is visible on small screens */
+  .project_timeline_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  /* Make mobile project cards static — no animation or transitions */
+  .project_timeline_mobile .project_container_mobile {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    will-change: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    background: var(--clr-card, rgba(255,255,255,0.02));
+    width: 92%;
+    max-width: 640px;
+    box-shadow: none;
+  }
+
+  /* Remove any in-view / stagger rules by overriding them */
+  .project_timeline_mobile.in-view .project_container_mobile {
+    animation: none !important;
+  }
+  .project_timeline_mobile.in-view .project_container_mobile:nth-child(n) {
+    animation-delay: 0ms !important;
+  }
+}
+
+/* Other website card (keeps layout unchanged) */
+.other_site_section .other_site_title {
+  font-size: var(--size-2xl);
+  margin-bottom: 1rem;
+  color: var(--clr-white);
+}
+
+.other_site_card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.other_site_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  display: block;
+}
+
+/* meta (name/desc/links) */
+.other_site_meta {
+  text-align: center;
+  width: 100%;
+}
+
+.other_site_name {
+  margin: 0.25rem 0;
+  font-size: var(--size-lg);
+  color: var(--clr-white);
+}
+
+.other_site_desc {
+  margin: 0.5rem 0 1rem;
+  color: var(--clr-muted);
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* keep buttons inline and small so layout stays stable */
+.other_site_links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* Desktop: place image and meta side-by-side without changing page flow */
+@media (min-width: 768px) {
+  .other_site_title{
+    font-size: var(--size-5xl);
+    margin-bottom: 1.5rem;
+  }
+  .other_site_card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .other_site_image {
+    width: 48%;
+    flex: 0 0 48%;
+  }
+  .other_site_meta {
+    width: 52%;
+    text-align: left;
+  }
+}
+
+/* Other website gallery (responsive, preserves layout) */
+.other_site_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.other_site_card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.other_site_image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1903 / 975;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* Meta under each image */
+.other_site_meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.25rem 0.5rem 0.25rem;
+}
+
+.other_site_name {
+  margin: 0;
+  font-size: var(--size-lg);
+  color: var(--clr-white);
+}
+
+.other_site_desc {
+  margin: 0;
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+}
+
+/* small inline buttons */
+.other_site_links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* Layout adjustments for larger screens */
+@media (min-width: 768px) {
+  .other_site_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .other_site_grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Updated gallery layout for one site with 4 screenshots */
+.other_site_row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Other website heading: center and scale nicely */
+.other_site_title {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  margin: 0 0 1.25rem;
+  color: var(--clr-white);
+}
+
+/* keep the row layout but center content vertically */
+.other_site_row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center; /* center meta + gallery horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* gallery: single column on small screens (larger images) */
+.other_site_gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* larger images with constrained height for good visibility */
+.other_site_image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1903 / 975;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform .28s ease, box-shadow .28s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  /* visible large size on mobile */
+  max-height: clamp(260px, 40vw, 420px);
+}
+
+/* hover effect kept subtle */
+.other_site_image:hover,
+.other_site_image:focus {
+  transform: scale(1.02);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.16);
+}
+
+/* Desktop / tablet: make images much larger — two-column gallery and bigger max-heights */
+@media (min-width: 768px) {
+  .other_site_row {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  /* meta column left, gallery right */
+  .other_site_meta {
+    flex: 0 0 32%;
+    text-align: left;
+    padding-top: 0.25rem;
+  }
+
+  .other_site_gallery {
+    flex: 1 1 68%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* larger screenshot preview on desktop */
+  .other_site_image {
+    max-height: clamp(420px, 36vh, 720px);
+  }
+}
+
+/* Wide screens: allow very large screenshots */
+@media (min-width: 1280px) {
+  .other_site_meta {
+    flex: 0 0 28%;
+  }
+  .other_site_gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .other_site_image {
+    max-height: 820px;
+  }
+}
+
+/* --- Other website gallery: centered heading + larger screenshots for desktop & mobile --- */
+
+/* Section wrapper */
+.other_site_section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Heading: same size as project/skills headings and centered */
+.other_site_title {
+  color: var(--clr-white);
+  text-align: center;
+  font-size: var(--size-4xl); /* matches other headings */
+  margin: 0 0 1rem;
+}
+
+/* Row: meta left (desktop) / stacked on mobile */
+.other_site_row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Meta: placed above on mobile, left on desktop */
+.other_site_meta {
+  width: 100%;
+  text-align: center;
+}
+.other_site_name {
+  margin: 0 0 0.25rem 0;
+  font-size: var(--size-lg);
+  color: var(--clr-white);
+}
+.other_site_desc {
+  margin: 0;
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+}
+
+/* Gallery: 1 column on small screens, 2 columns on tablet, 2 columns on desktop but much larger images */
+.other_site_gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+/* Images: responsive and clearly visible
+   - use contain on narrow screens to support portrait mobile screenshots (466x831)
+   - use cover on wider screens for large desktop screenshots (1903x975)
+*/
+.other_site_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+  background-color: var(--clr-bg, #071014); /* subtle background if aspect differs */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+  transition: transform .28s ease, box-shadow .28s ease;
+  max-height: 60vh; /* ensures images are large but not overflowing */
+}
+
+/* subtle hover effect (desktop only) */
+.other_site_image:hover,
+.other_site_image:focus {
+  transform: scale(1.02);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.20);
+}
+
+/* Tablet / Desktop layout */
+@media (min-width: 768px) {
+  .other_site_row {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .other_site_meta {
+    flex: 0 0 28%;
+    text-align: left;
+    padding-top: 0.5rem;
+  }
+
+  .other_site_gallery {
+    flex: 1 1 72%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* larger, denser images on desktop */
+  .other_site_image {
+    object-fit: cover;
+    max-height: 900px; /* increase visibility on desktop */
+  }
+}
+
+/* Very large screens: make screenshots extra large */
+@media (min-width: 1280px) {
+  .other_site_title{
+
+    font-size: var(--size-5xl);
+  }
+  .other_site_meta { flex: 0 0 26%; }
+  .other_site_gallery { gap: 1.25rem; grid-template-columns: repeat(2, 1fr); }
+  .other_site_image { max-height: 1100px; }
+}
+
+/* Mobile tweaks: portrait screenshots look better with contain and taller max-height */
+@media (max-width: 767px) {
+  .other_site_meta { text-align: center; }
+  .other_site_image {
+    object-fit: contain;
+    max-height: 70vh; /* make mobile screenshots taller and clearer */
+  }
+}
+
+/* Make gallery 2-up on small screens (mobile) */
+@media (max-width: 767px) {
+  .other_site_gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .other_site_gallery picture {
+    display: block;
+    width: 100%;
+    aspect-ratio: 466 / 831; /* portrait container matching mobile screenshots */
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--clr-bg, #071014);
+  }
+
+  .other_site_gallery picture img.other_site_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill the portrait container */
+    display: block;
+    max-height: none;
+  }
+}
+
+/* ensure images remain accessible and do not break layout */
+.other_site_gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* end of Other website styles */
+@media (min-width: 1024px) {
+  /* Force Other Website heading to 5xl on desktop with higher specificity */
+  .other_site_section.container.section .other_site_title {
+    font-size: var(--size-5xl) !important;
+    line-height: 1;
+    margin-bottom: 4rem;
+  }
+}
+

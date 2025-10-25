@@ -11,10 +11,17 @@
     gap: 5rem;
     align-items: center;
 }
+
+/* base icon size: slightly smaller now */
 .skills_image{
-    width: 4rem;
-    
+    width: 4.5rem; /* reduced from 5rem */
+    height: 4.5rem;
+    object-fit: contain;
+    flex: 0 0 4.5rem;
+    display: block;
 }
+
+/* items */
 .skills_list{
     list-style-type:none;
     display: flex;
@@ -22,43 +29,42 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    transform: translateY(12px) scale(0.995);
+    transition: transform 420ms cubic-bezier(.22,.9,.2,1), opacity 420ms ease;
+    will-change: transform, opacity;
+    gap: 12px;
+    min-height: calc(4.5rem + 1rem); /* updated to match icon */
+}
+
+.skills_list.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 .skills_ul{
     display: flex;
     flex-direction: column;
     padding: 0 0;
-    gap: 2rem;
+    gap: 2.5rem; /* increased gap between items */
 }
 .skills_subtitle{
-    font-size: var(--size-sm);
+    font-size: 1.05rem; /* a bit larger for readability */
     color: var(--clr-white);
+    margin-top: 0.5rem;
 }
-.skills_list:nth-child(1) {
-    transition: all 1s;
-}
-.skills_list:nth-child(2) {
-    transition: all 1.1s;
-}
-.skills_list:nth-child(3) {
-    transition: all 1.2s;
-}
-.skills_list:nth-child(4) {
-    transition: all 1.3s;
-}
-.skills_list:nth-child(5) {
-    transition: all 1.4s;
-}
-.skills_list:nth-child(6) {
-    transition: all 1.5s;
-}
+
+/* staggered transitions (keep) */
+.skills_list:nth-child(1) { transition: all 1s; }
+.skills_list:nth-child(2) { transition: all 1.1s; }
+.skills_list:nth-child(3) { transition: all 1.2s; }
+.skills_list:nth-child(4) { transition: all 1.3s; }
+.skills_list:nth-child(5) { transition: all 1.4s; }
+.skills_list:nth-child(6) { transition: all 1.5s; }
 
 .hide{
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
-    
-    
-
 }
 .show {
     filter: blur(0);
@@ -66,48 +72,55 @@
     opacity: 1;
 }
 
-
-@media(min-width: 475px){
-    
-}
-@media(min-width: 640px){
-    
-}
 @media(min-width: 768px){
     .skills_ul{
         flex-direction: row;
-        gap: 3rem;
+        gap: 2.5rem; /* increased spacing on tablet */
     }
 }
-@media(min-width: 1024px){
 
+@media(min-width: 1024px){
     .skills_ul{
         flex-direction: row;
-        gap: 5rem;
+        gap: 2rem; /* slightly larger than before */
     }
     .skills_title{
         font-size: var(--size-4xl);
     }
+    /* desktop icon: one size smaller than previous 8rem -> 7rem */
     .skills_image{
-        width: 7rem;
-        
+        width: 7rem; /* reduced from 8rem */
+        height: 7rem;
+        flex: 0 0 7rem;
     }
     .skills_subtitle{
-        font-size: var(--size-lg);
-       
+        font-size: 1.25rem; /* make name bigger on desktop */
     }
-    .hide{       
+    .skills_list{
+        min-height: calc(7rem + 1rem); /* match desktop icon height */
+    }
+    .hide{
         transform: translateX(-200%);
     }
-    
 }
+
+/* extra-large screens */
 @media(min-width: 1280px){
     .skills_title{
         font-size: var(--size-5xl);
-       
-    
     }
-}
-@media(min-width: 1530px){
-    
+    .skills_image{
+        width: 8rem; /* reduced from 9rem to match "one size smaller" */
+        height: 8rem;
+        flex: 0 0 8rem;
+    }
+    .skills_subtitle{
+        font-size: 1.4rem;
+    }
+    .skills_list{
+        min-height: calc(8rem + 1rem);
+    }
+    .skills_ul{
+        gap: 2.5rem; /* more breathing room on very wide screens */
+    }
 }
